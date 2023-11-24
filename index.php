@@ -11,6 +11,12 @@
 
 <body>
     <div id="app">
+        <h1>To do list</h1>
+        <ul>
+            <li v-for="(todo, i) in todos">
+                {{todo.text}}
+            </li>
+        </ul>
 
     </div>
 
