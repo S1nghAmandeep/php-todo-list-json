@@ -12,6 +12,7 @@
 <body>
     <div id="app">
         <h1>To do list</h1>
+        <input type="text" v-model="newTodos" @keyup.enter="addTodos()">
         <ul>
             <li v-for="(todo, i) in todos">
                 {{todo.text}}
