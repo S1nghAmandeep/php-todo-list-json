@@ -32,6 +32,22 @@ createApp({
                 this.todos = res.data
                 this.newTodos = ''
             })
+        },
+
+        todoStatus(index) {
+            // console.log(index);
+            const data = {
+                i: index
+            }
+
+            axios.post('taskStatus.php', data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                }
+            })
+                .then(res => {
+                    this.todos = res.data
+                })
         }
     },
 
