@@ -22,7 +22,7 @@
             <div class="mt-5">
                 <ul class="list-group">
                     <li @click="todoStatus(i)" :class="todo.done? 'list-group-item-danger text-decoration-line-through' : ''" class="list-group-item list-group-item-success d-flex justify-content-between align-items-center" v-for="(todo, i) in todos" :key="i">
-                        {{todo.text}} <button class="btn btn-outline-success">&cross;</button>
+                        {{todo.text}} <button @click.stop="deleteTodo(i)" class="btn btn-outline-success">&cross;</button>
                     </li>
                 </ul>
             </div>
