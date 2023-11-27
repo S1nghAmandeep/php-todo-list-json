@@ -11,7 +11,7 @@ createApp({
     methods: {
         getData() {
             axios.get('server.php').then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 this.todos = res.data
             })
         },
@@ -48,6 +48,22 @@ createApp({
                 .then(res => {
                     this.todos = res.data
                 })
+        },
+
+        deleteTodo(index) {
+            console.log(index);
+
+            const data = {
+                i: index
+            }
+
+            axios.post('remove.php', data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                }
+            }).then(res => {
+                this.todos = res.data
+            })
         }
     },
 
