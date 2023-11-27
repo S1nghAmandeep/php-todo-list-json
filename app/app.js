@@ -21,7 +21,7 @@ createApp({
 
             const data = {
                 text: this.newTodos,
-                done: true
+                done: false
             }
             axios.post('store.php', data, {
                 headers: {
@@ -35,7 +35,7 @@ createApp({
         }
     },
 
-    mounted() {
+    created() {
         this.getData()
     }
 }).mount('#app')

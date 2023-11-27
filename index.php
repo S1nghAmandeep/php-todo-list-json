@@ -22,7 +22,7 @@
             <div class="mt-5">
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center" v-for="(todo, i) in todos">
-                        {{todo.text}}
+                        {{todo.text}} <button class="btn btn-outline-success">&cross;</button>
                     </li>
                 </ul>
             </div>

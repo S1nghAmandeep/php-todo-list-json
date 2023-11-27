@@ -4,7 +4,7 @@ $new_todo = $_POST['text'] ?? '';
 
 $todo = [
     "text" => $new_todo,
-    "done" => true
+    "done" => false
 ];
 
 //var_dump($new_todo);
@@ -14,7 +14,6 @@ $todos = json_decode($todo_array, true);
 
 
 $todos[] = $todo;
-//var_dump('ciao');
 
 $todo_array = json_encode($todos);
 file_put_contents('./todos.json', $todo_array);
